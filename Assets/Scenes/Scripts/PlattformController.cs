@@ -63,7 +63,7 @@ public class PlattformController : MonoBehaviour
 
         yield return new WaitForSeconds(1f);
 
-        GameObject newPlayer = Instantiate(playerPrefab, new Vector3(0f, 16.5f, 0f), Quaternion.identity);
+        GameObject newPlayer = Instantiate(playerPrefab, new Vector3(-12f, 16.5f, -6f), Quaternion.identity);
 
         PlayerController newPlayerController = newPlayer.GetComponent<PlayerController>();
         newPlayerController.life = playerController.life;

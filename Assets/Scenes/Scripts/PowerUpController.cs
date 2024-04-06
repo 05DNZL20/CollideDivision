@@ -16,7 +16,7 @@ public class PowerUpController : MonoBehaviour
     {
 
     }
-    private void OnTriggerEnter(Collider other)
+    private async void OnTriggerEnter(Collider other)
     {
 
         PlayerController player = other.gameObject.GetComponent<PlayerController>();
@@ -26,10 +26,6 @@ public class PowerUpController : MonoBehaviour
             player.speed += 10f;
         }
 
-        StartCoroutine(WaitSomeSeconds());
-        player.speed = originalSpeed;
-
-
         gameObject.SetActive(false);
 
         SpawnerController spawnerController = FindObjectOfType<SpawnerController>();
@@ -38,11 +34,8 @@ public class PowerUpController : MonoBehaviour
             spawnerController.isPowerUpActive = false;
         }
 
-    }
-
-    IEnumerator WaitSomeSeconds()
-    {
-        yield return new WaitForSeconds(2f);
+        await Task.Delay(4000);
+        player.speed = originalSpeed;
     }
 
 }

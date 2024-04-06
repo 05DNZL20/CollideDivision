@@ -146,9 +146,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3187481c1c5d086468120b333e933a56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
-  resetSpeed: 5
-  bounceSpeed: 2.5
+  speed: 7
+  resetSpeed: 7
+  bounceSpeed: 1.5
   life: 3
   player: 2
 --- !u!1 &8469509848664368933
